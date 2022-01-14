@@ -323,6 +323,11 @@ First, clone the repository and cd into it.
 * `npm start` Start express server locally
 * Server runs at http://localhost:9000 or what `$PORT` env defines
 
+### pm2启动 修改package.json 
+env-cmd pm2 start ./src -e js src/index.js 
+有一个问题 需要kill src 这个进程 不然占用端口 只保留 index pm2 list ,pm2 del pid 
+pm2 restart all 
+
 
 ### Techstack
 
